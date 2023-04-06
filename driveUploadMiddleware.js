@@ -41,7 +41,7 @@ const uploadFile = async (fileObject) => {
     console.log(`Uploaded file: ${data.name} with id: ${data.id}`);
 };
 
-uploadRouter.post("/upload", upload.any(), async (req, res) => {
+uploadRouter.post("/upload", upload.any(), async (req, res, next) => {
     try {
         // En realidad lo que viene en el body (nombre, mail y pais) no tienen uso.. Pero bueno.
         // console.log(req.body);
@@ -50,9 +50,7 @@ uploadRouter.post("/upload", upload.any(), async (req, res) => {
         files.map(async (file) => {
             await uploadFile(file);
         });
-
-        console.log(body);
-        res.status(200).send("Form Submitted");
+        next();
     } catch (i) {
         res.send(i.message);
     }

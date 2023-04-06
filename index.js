@@ -17,9 +17,8 @@ app.get('/', (req, res) => {
 });
 
 app.post('/upload', driveUploadMiddleware, (req, res) => { 
-    res.json("Nice");
+    res.status(200).send("Nicee");
 });
-
 
 // 404
 app.use((req, res, next) => {
