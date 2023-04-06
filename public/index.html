@@ -11,7 +11,7 @@
     <title>NodeJs Google Drive Upload</title>
 </head>
 <body>
-    <form action="" method="POST" enctype="multipart/form-data">
+    <form action="/upload" method="POST" enctype="multipart/form-data">
         <h1>Upload Files</h1>
 
         <div class="field-container">
@@ -31,7 +31,7 @@
 
         <div class="field-container">
             <label for="files">Files to Upload</label>
-            <input type="file" name="files">
+            <input type="file" name="files" multiple required>
         </div>
 
         <button type="submit">Submit</button>
