@@ -11,8 +11,6 @@ app.use(express.urlencoded({ extended: true }));
 const dotenv = require('dotenv');
 dotenv.config();
 
-console.log(process.env.HOLA)
-
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + "/index.html");
@@ -28,7 +26,7 @@ app.use((req, res, next) => {
     res.status(404).send("Page not found");
 })
 
-app.listen(8080, ()=> {
-    console.log("Server listening on port 8080");
+// Listen
+app.listen(process.env.PORT, () => {
+    console.log(`Server successfully running on port ${process.env.PORT}`);
 });
-
