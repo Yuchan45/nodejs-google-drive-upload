@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+    <title>NodeJs Google Drive Upload</title>
+</head>
+<body>
+    <form action="" method="POST" enctype="multipart/form-data">
+        <h1>Upload Files</h1>
+
+        <div class="field-container">
+            <label for="name">Name</label>
+            <input type="text" name="name" placeholder="Name">
+        </div>
+
+        <div class="field-container">
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="Email Address">
+        </div>
+
+        <div class="field-container">
+            <label for="country">Country</label>
+            <input type="text" name="country" placeholder="Country">
+        </div>
+
+        <div class="field-container">
+            <label for="files">Files to Upload</label>
+            <input type="file" name="files">
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
