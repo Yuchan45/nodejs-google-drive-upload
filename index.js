@@ -1,12 +1,17 @@
 const express = require('express');
-const driveUploadMiddleware = require('./driveUploadMiddleware');
 const app = express();
 
+const driveUploadMiddleware = require('./driveUploadMiddleware');
 
 // Configs
 app.use(express.static(__dirname + '/public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+const dotenv = require('dotenv');
+dotenv.config();
+
+console.log(process.env.HOLA)
 
 
 app.get('/', (req, res) => {

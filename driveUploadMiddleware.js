@@ -4,10 +4,13 @@ const multer = require("multer");
 const path = require("path");
 const { google } = require("googleapis");
 
+const dotenv = require('dotenv');
+dotenv.config();
+
 const uploadRouter = express.Router();
 const upload = multer();
 
-const GOOGLE_DRIVE_ID = ['1I5BRhc32LwbmAjbAxgMkEJRCX1oyDfmp'];
+const GOOGLE_DRIVE_ID = [process.env.G_DRIVE_ID];
 const KEY_FILE_PATH = path.join(__dirname, "credentials.json");
 const SCOPES = ["https://www.googleapis.com/auth/drive"];
 
